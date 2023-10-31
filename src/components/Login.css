@@ -33,13 +33,13 @@ body {
     margin: 0;
     font-weight: 500;
     font-size: 1.9em;
+    margin-bottom: 15px;
 }
 
-formLogin p {
-    display: inline-block;
-    font-size: 14px;
+.formLogin p {
     color: #666;
     margin-bottom: 25px;
+
 }
 
 .logotipo{

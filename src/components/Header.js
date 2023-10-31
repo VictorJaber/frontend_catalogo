@@ -6,7 +6,7 @@ import './Home.css'
 
 function Header() {
     return (
-        <div>
+        <div className={"divPai"}>
             <header>
                 <div className="navBar">
                     <div className="left">

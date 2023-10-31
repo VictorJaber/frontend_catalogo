@@ -1,6 +1,4 @@
 import React from "react";
-import logo from '../assets/logotipo.png';
-import user from "../assets/Group 1.png";
 import ford from "../assets/ford.png"
 import honda from "../assets/honda.png"
 import chery from "../assets/chery.png"
@@ -26,15 +24,15 @@ function Home() {
                     <Link to="/ford">
                         <img src={ford} alt="Ford" />
                     </Link>
-                    <img src={honda}/>
-                    <img src={hyundai}/>
-                    <img src={caoa}/>
+                    <img src={honda} alt="Honda"/>
+                    <img src={hyundai} alt="Hyundai"/>
+                    <img src={caoa} alt="caoa"/>
                 </div>
                 <div className={"brand"}>
-                    <img src={chery} />
-                    <img src={gwm}/>
-                    <img src={renault}/>
-                    <img src={volks}/>
+                    <img src={chery} alt="Chery" />
+                    <img src={gwm} alt="gwm"/>
+                    <img src={renault} alt="renault"/>
+                    <img src={volks} alt="volks"/>
                 </div>
             </div>
 

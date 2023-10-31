@@ -1,19 +1,20 @@
-import login from "./components/Login";
 import Login from "./components/Login";
-import {BrowserRouter as Router, Switch, Route, Link, Routes, BrowserRouter} from 'react-router-dom';
+import {Route, Routes, BrowserRouter} from 'react-router-dom';
 import Home from "./components/Home";
-import Ford from "./components/Ford";
+import Products from "./components/Products";
 
 function App() {
-    return (<BrowserRouter>
-        <Routes>
+    return (
 
-            <Route path={"/"} element={<Login/>}/>
-            <Route path={"/home"} element={<Home/>}/>
-            <Route path={"/ford"} element={<Ford/>}/>
+        <BrowserRouter>
+            <Routes>
 
-        </Routes>
-    </BrowserRouter>);
+                <Route path={"/"} element={<Login/>}/>
+                <Route path={"/home"} element={<Home/>}/>
+                <Route path={"/ford"} element={<Products/>}/>
+
+            </Routes>
+        </BrowserRouter>);
 }
 
 export default App;

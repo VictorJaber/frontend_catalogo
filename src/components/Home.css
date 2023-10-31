@@ -1,20 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    color: #023047
+    color: #023047;
+    overflow: hidden;
 }
+
+.divPai {
+    box-shadow: 1px 1px 5px black;
+}
+
+
 .navBar {
-    width: auto;
+    margin: 0 auto;
+    max-width: 1280px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    box-shadow: 1px 1px 5px black;
-    padding: 20px 60px;
     color: #fff;
+    padding-top: 20px;
 
 }
 
@@ -26,15 +33,14 @@ body {
 .navBar .left {
     font-size: 24px;
     color: black;
-    font-weight: bold;
-
-
-}
-
-.navBar .right{
-    padding-left: 140px;
+    font-weight: 500;
 
 }
+
+.right{
+    padding-left: 150px;
+}
+
 
 .navBar img {
     max-height: 80px;
@@ -50,7 +56,6 @@ body {
 
 }
 .brand {
-
     margin-top: 20px;
     text-align: center;
 }
