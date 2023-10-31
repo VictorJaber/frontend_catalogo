@@ -11,7 +11,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px black;
     padding: 20px 60px;
     color: #fff;
 
@@ -24,6 +25,8 @@ body {
 
 .navBar .left {
     font-size: 24px;
+    color: black;
+    font-weight: bold;
 
 
 }
@@ -37,4 +40,28 @@ body {
     max-height: 80px;
     display: block;
     margin: 0;
+}
+
+.headline{
+    font-size: 28px;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+
+}
+.brand {
+
+    margin-top: 20px;
+    text-align: center;
+}
+
+.brand img{
+    width: 14%;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.brand img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
