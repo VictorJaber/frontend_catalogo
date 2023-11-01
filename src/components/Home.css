@@ -63,6 +63,7 @@ body {
 .brand img{
     width: 14%;
     padding: 20px;
+    border-radius: 25px;
     transition: transform 0.2s;
 }
 

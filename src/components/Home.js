@@ -35,8 +35,6 @@ function Home() {
                     <img src={volks} alt="volks"/>
                 </div>
             </div>
-
-
         </div>
     )
 }
