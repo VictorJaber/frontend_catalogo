@@ -76,10 +76,10 @@ body {
 }
 
 .formLogin a:hover {
-    color: #ADEAEA;
+    color:  #0c2b7c;
 }
 .btn {
-    background-color: #015f90;
+    background-color: #0555d0;
     color: #fff;
     font-size: 14px;
     font-weight: 600;
@@ -91,9 +91,8 @@ body {
 }
 
 .btn:hover {
-    transform: scale(1.05);
-    background-color: #ADEAEA;
-    color: #000000;
+    background-color: #091942;
+    color: white;
 
 }
 
