@@ -1,14 +1,45 @@
-import React, { useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from './Header';
-import FilterModal from './FilterModal'; // Importe o componente FilterModal
-import './Products.css'
-import lupa from '../assets/lupa.svg'
-import filter from '../assets/filter-solid.svg'
+import FilterModal from './FilterModal';
+import './Products.css';
+import lupa from '../assets/lupa.svg';
+import filter from '../assets/filter-solid.svg';
 
-function Products(props) {
-    const brands = ["CAOA", "Chery", "Ford", "GWM", "Honda", "Hyundai", "Renault", "Volkswagen"];
+function Products() {
+    const [post, setPost] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const [isModalOpen, setIsModalOpen] = useState(false); // Estado para controlar a visibilidade do modal
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchPost = async () => {
+            try {
+                const response = await fetch('http://127.0.0.1:3333/post', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro na resposta da API');
+                }
+
+                const result = await response.json();
+
+                // Certifique-se de que 'data' existe na resposta antes de tentar acessá-lo
+                const postData = result.data || [];
+
+                setPost(postData);
+            } catch (error) {
+                console.error('Erro ao buscar posts:', error.message);
+                setError('Erro ao buscar posts: ' + error.message);
+            }
+        };
+
+
+        fetchPost();
+    }, []);
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
@@ -24,15 +55,14 @@ function Products(props) {
 
     const applyFilters = () => {
         // Lógica para aplicar os filtros aqui
-        // Você pode acessar os valores dos campos de filtro, como ano e tipo de acessórios, aqui
     };
 
     return (
         <div>
-            <Header />
+            <Header/>
             <div className="productLabel">
                 <div className="brandProduct">
-                    <h1>{brands[2]}</h1>
+                    <h1>Nome da Marca</h1>
                 </div>
                 <div className="search">
                     <input
@@ -41,16 +71,28 @@ function Products(props) {
                         value={searchTerm}
                         onChange={handleSearchChange}
                     />
-                    <img src={lupa} alt="Ícone de Lupa" className="search-icon" onClick={handleSearchChange} />
+                    <img src={lupa} alt="Ícone de Lupa" className="search-icon" onClick={handleSearchChange}/>
                 </div>
                 <div>
-                    <img src={filter} alt="Ícone de Filtro" className="filter-icon" onClick={openModal} />
+                    <img src={filter} alt="Ícone de Filtro" className="filter-icon" onClick={openModal}/>
                 </div>
             </div>
-            {isModalOpen && (
-                <FilterModal onClose={closeModal} onApplyFilters={applyFilters} />
-            )}
+            {isModalOpen && <FilterModal onClose={closeModal} onApplyFilters={applyFilters}/>}
+            <div className="error-message">{error}</div>
+            <div className="productList">
+                <h2>Lista de Produtos</h2>
+                <ul>
+                    {Array.isArray(post) && post.map((item) => (
+                        <li key={item.id}>
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                            <img src={item.photo} alt={`Foto de ${item.title}`}/>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
+
     );
 }
 
