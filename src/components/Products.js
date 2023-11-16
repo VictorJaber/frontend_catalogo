@@ -4,6 +4,15 @@ import FilterModal from './FilterModal';
 import './Products.css';
 import lupa from '../assets/lupa.svg';
 import filter from '../assets/filter-solid.svg';
+import {Link} from "react-router-dom";
+import ford from "../assets/ford.png";
+import honda from "../assets/honda.png";
+import hyundai from "../assets/hyundai.png";
+import caoa from "../assets/caoa.png";
+import chery from "../assets/chery.png";
+import gwm from "../assets/gwm.png";
+import renault from "../assets/renault.png";
+import volks from "../assets/volkswagen.png";
 
 
 function Products() {
@@ -78,17 +87,19 @@ function Products() {
             </div>
             {isModalOpen && <FilterModal onClose={closeModal} onApplyFilters={applyFilters}/>}
             <div className="error-message">{error}</div>
-            <div className="productList">
-                <h2>Lista de Produtos</h2>
-                <ul>
-                    {Array.isArray(post) && post.map((item) => (
-                        <li key={item.id}>
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                            <img src={''} alt={`Foto de ${item.title}`}/>
-                        </li>
-                    ))}
-                </ul>
+            <div className={"brand"}>
+                <Link to="/ford">
+                    <img src={ford} alt="Ford" />
+                </Link>
+                <img src={honda} alt="Honda"/>
+                <img src={hyundai} alt="Hyundai"/>
+                <img src={caoa} alt="caoa"/>
+            </div>
+            <div className={"brand"}>
+                <img src={chery} alt="Chery" />
+                <img src={gwm} alt="gwm"/>
+                <img src={renault} alt="renault"/>
+                <img src={volks} alt="volks"/>
             </div>
         </div>
 

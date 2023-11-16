@@ -24,7 +24,7 @@ function User() {
             <div className={'container'}>
                 <h1 className={'headline'}>Meu Perfil</h1>
                 <form>
-                    <div >
+                    <div>
                         <label htmlFor="nome">Nome:</label>
                     </div>
                     <div className={'campo'} >
