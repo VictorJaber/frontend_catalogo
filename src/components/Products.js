@@ -5,6 +5,7 @@ import './Products.css';
 import lupa from '../assets/lupa.svg';
 import filter from '../assets/filter-solid.svg';
 
+
 function Products() {
     const [post, setPost] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -86,7 +87,7 @@ function Products() {
                         <li key={item.id}>
                             <h3>{item.title}</h3>
                             <p>{item.description}</p>
-                            <img src={item.photo} alt={`Foto de ${item.title}`}/>
+                            <img src={''} alt={`Foto de ${item.title}`}/>
                         </li>
                     ))}
                 </ul>
