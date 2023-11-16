@@ -23,7 +23,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 8px;
-    width: 400px;
+    width: 305px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -35,21 +35,21 @@ body {
 }
 
 .search-icon {
-    width: 20px; /* Largura da imagem do ícone */
-    height: 20px; /* Altura da imagem do ícone */
-    margin-left: 8px; /* Espaçamento entre o ícone e o campo de entrada */
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
     cursor: pointer;
 }
 
-.filter-icon{
+.filter-icon {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
+    margin-left: 200px;
     width: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
-
 

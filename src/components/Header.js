@@ -13,10 +13,10 @@ function Header() {
                         <span>Catálogo Digital</span>
                     </div>
                     <div className="center">
-                        <img src={logo} className="logotipo" alt="Logo"/>
+                        <a href={'/home'}><img src={logo} className="logotipo" alt="Logo"/></a>
                     </div>
                     <div className="right">
-                        <img src={user} alt="Usuário"/>
+                        <a href={'profile'}> <img src={user} alt="Usuário"/></a>
                     </div>
                 </div>
             </header>

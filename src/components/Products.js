@@ -37,8 +37,6 @@ function Products() {
                 setError('Erro ao buscar posts: ' + error.message);
             }
         };
-
-
         fetchPost();
     }, []);
 
