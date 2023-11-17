@@ -39,6 +39,13 @@ body {
 
 .right{
     padding-left: 150px;
+    transition: transform 0.2s;
+}
+
+.right:hover{
+    padding-left: 150px;
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 

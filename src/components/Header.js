@@ -1,7 +1,6 @@
 import React from "react";
 import logo from '../assets/logotipo.png';
 import user from "../assets/Group 1.png";
-import './Reset.css'
 import './Home.css'
 
 function Header() {
